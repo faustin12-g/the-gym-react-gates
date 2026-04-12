@@ -1,13 +1,23 @@
 import { useState } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import useGetUserById from "./hooks/useGetUserById";
 
 const UserProfileDemo = () => {
-  const [selectedUserId, setSelectedUserId] = useState(1);
-  const { user, posts, loading, error } = useGetUserById(selectedUserId);
+
+
+
+  const { id } = useParams()
+
+
+
+    const navigate = useNavigate()
+    const selectedUserId = Number(id) || 1
+    const { user, posts, loading, error} = useGetUserById(selectedUserId)
 
   const handleUserChange = (event) => {
-    setSelectedUserId(Number(event.target.value));
+    const newId = event.target.value
+    navigate(`/user/${newId}`)
   };
-
   return (
     <div className="max-w-4xl mx-auto p-6 font-sans">
       <h1 className="text-center text-3xl font-bold text-gray-800 mb-8">
@@ -24,9 +34,9 @@ const UserProfileDemo = () => {
           onChange={handleUserChange}
           className="px-4 py-2 text-base border-2 border-gray-300 rounded-lg bg-white focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200 transition-colors"
         >
-          {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((id: number) => (
-            <option key={id} value={id}>
-              User {id}
+          {[1,2,3,4,5,6,7].map((user) => (
+            <option key={user} value={user}>
+              User {user}
             </option>
           ))}
         </select>

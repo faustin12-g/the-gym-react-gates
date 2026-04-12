@@ -1,12 +1,19 @@
 import React from 'react'
 import ProductList from './components/uk/ProductList'
 import Landing from './components/uk/Landing'
+import { Routes, Route } from 'react-router-dom'
+import UserProfileDemo from './components/uk/UserProfileDemo'
 
 const App = () => {
   return (
     <>
-      {/* <ProductList /> */}
-      <Landing />
+      <Routes>
+        <Route path='/' element={<Landing />}/>
+        <Route path='/products-filter' element={<ProductList />} />
+        <Route path='/user-profile' element={<UserProfileDemo />}>
+          
+        </Route>
+      </Routes>
 
       
     </>

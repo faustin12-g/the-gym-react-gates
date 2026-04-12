@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Landing = () => {
   return (
@@ -25,11 +26,16 @@ const Landing = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Problem Card 1 */}
-            <div className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow cursor-pointer border-l-4 border-blue-500">
+            <Link to='/products-filter' className="bg-white rounded-lg shadow-lg p-4 hover:shadow-xl transition-shadow cursor-pointer border-l-4 border-blue-500">
               <h3 className="text-xl font-semibold text-gray-800 mb-3">
                 <button>Product Filtering</button>
               </h3>
-            </div>
+            </Link>
+            <Link to='/user-profile' className="bg-white rounded-lg shadow-lg p-4 hover:shadow-xl transition-shadow cursor-pointer border-l-4 border-blue-500">
+              <h3 className="text-xl font-semibold text-gray-800 mb-3">
+                <button>User profile domo</button>
+              </h3>
+            </Link>
           </div>
         </div>
       </div>
