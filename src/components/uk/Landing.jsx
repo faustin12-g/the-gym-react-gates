@@ -36,6 +36,11 @@ const Landing = () => {
                 <button>User profile domo</button>
               </h3>
             </Link>
+            <Link to='/touch-typing-app' className="bg-white rounded-lg shadow-lg p-4 hover:shadow-xl transition-shadow cursor-pointer border-l-4 border-blue-500">
+              <h3 className="text-xl font-semibold text-gray-800 mb-3">
+                <button>Touch Typing App</button>
+              </h3>
+            </Link>
           </div>
         </div>
       </div>
