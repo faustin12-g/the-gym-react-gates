@@ -3,13 +3,21 @@ const TouchTypingApp = () => {
 const sentence = "The quick brown fox jumps over the lazy dog.";
 const [userInput, setUserInput] = useState("");
 const [isCompleted, setIsCompleted] = useState(false);
-const isCorrect = null;
-const isWrong = null;
+let isCorrect = false;
+let isWrong = false;
 
 const handleInputChange = (e) => {
     const newInput = e.target.value
     setUserInput(newInput)
     if(newInput.length===sentence.length) setIsCompleted(true)
+    const lastCharTyped = userInput[userInput.length-1]
+    const expectedChar = sentence[userInput.length-1]
+    if(lastCharTyped === expectedChar)
+    {
+        isCorrect=true
+    }else{
+        isWrong=true
+    }
 };
 
 const resetApp = () => {
