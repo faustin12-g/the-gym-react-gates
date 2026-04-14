@@ -5,6 +5,7 @@ import { Routes, Route } from 'react-router-dom'
 import UserProfileDemo from './components/uk/UserProfileDemo'
 import TouchTypingApp from './components/uk/TouchTypingApp '
 import NameTransferLists from './components/uk/NameTransferLists '
+import Lazy from './Lazy'
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <Route path='/user-profile/:id' element={<UserProfileDemo />} />
         <Route path='/touch-typing-app' element={<TouchTypingApp />} />
         <Route path='/name-transfer' element={<NameTransferLists />}/>
+        <Route path='/lazy-suspense' element={<Lazy />} />
       </Routes>
 
       

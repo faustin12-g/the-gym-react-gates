@@ -8,7 +8,7 @@ const Landing = () => {
       <div className="max-w-4xl mx-auto px-6 py-20">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-gray-800 mb-4">
-            React Gates
+            React Gate Prep
           </h1>
           <p className="text-xl text-gray-600 mb-6">
             Master React concepts by solving real-world problems
@@ -33,7 +33,7 @@ const Landing = () => {
             </Link>
             <Link to='/user-profile/1' className="bg-white rounded-lg shadow-lg p-4 hover:shadow-xl transition-shadow cursor-pointer border-l-4 border-blue-500">
               <h3 className="text-xl font-semibold text-gray-800 mb-3">
-                <button>User profile domo</button>
+                <button>User profile</button>
               </h3>
             </Link>
             <Link to='/touch-typing-app' className="bg-white rounded-lg shadow-lg p-4 hover:shadow-xl transition-shadow cursor-pointer border-l-4 border-blue-500">
@@ -43,7 +43,12 @@ const Landing = () => {
             </Link>
             <Link to='/name-transfer' className="bg-white rounded-lg shadow-lg p-4 hover:shadow-xl transition-shadow cursor-pointer border-l-4 border-blue-500">
               <h3 className="text-xl font-semibold text-gray-800 mb-3">
-                <button>Name transfer</button>
+                <button>Transfer</button>
+              </h3>
+            </Link>
+            <Link to='/lazy-suspense' className="bg-white rounded-lg shadow-lg p-4 hover:shadow-xl transition-shadow cursor-pointer border-l-4 border-blue-500">
+              <h3 className="text-xl font-semibold text-gray-800 mb-3">
+                <button>Lazy loading and suspense</button>
               </h3>
             </Link>
           </div>
